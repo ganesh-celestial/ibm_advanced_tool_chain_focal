@@ -26,3 +26,4 @@ script:
   - ./hello_world_cpp_program
   - echo "Running Hello world (GO Program) using default go"
   - go run hello_world.go
+  - sudo sh python_interpreter.sh
