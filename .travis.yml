@@ -1,4 +1,4 @@
-dist: bionic
+dist: focal
 arch: ppc64le
 group: dev
 script:
@@ -21,4 +21,7 @@ script:
   - g++ hello_world.cpp -o hello_world_cpp_program
   - ./hello_world_cpp_program
   - echo "Running Hello world (GO Program) using default go"
-  - go version
+  - /home/travis/bin/gimme stable
+  - export GOROOT='/home/travis/.gimme/versions/go1.15.3.linux.ppc64le';
+  - export PATH="/home/travis/.gimme/versions/go1.15.3.linux.ppc64le/bin:${PATH}";
+  - go run hello_world.go
